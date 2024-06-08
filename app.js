@@ -5,11 +5,13 @@ import { dirname } from 'path'; // Rutas absolutas
 
 import hbs from 'hbs';
 
+import {config} from 'dotenv';
+
 const __filename = fileURLToPath(import.meta.url); // Rutas absolutas
 const __dirname = dirname(__filename); // Rutas absolutas
 
 const app = express();
-const port = 8090;
+const port = config({path:'.env'}).parsed.PORT;
 
 // Hnadlebars
 app.set('view engine', 'hbs');
