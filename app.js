@@ -11,7 +11,8 @@ const __filename = fileURLToPath(import.meta.url); // Rutas absolutas
 const __dirname = dirname(__filename); // Rutas absolutas
 
 const app = express();
-const port = config({path:'.env'}).parsed.PORT;
+//const port = config({path:'.env'}).parsed.PORT;
+const port = 65000;
 
 // Hnadlebars
 app.set('view engine', 'hbs');
